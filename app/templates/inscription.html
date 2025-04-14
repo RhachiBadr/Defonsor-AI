@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defonsor AI - Inscription</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Header (identique à index.html) -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Inscription -->
+  <section id="inscription" class="connexion">
+    <div class="connexion-title">
+      <i class="fas fa-user-plus contact-title-icon" aria-label="Icône d'inscription"></i>
+      <h2>Inscription</h2>
+    </div>
+    <p>Créez un compte pour commencer à utiliser Defonsor AI.</p>
+    <div class="connexion-container">
+      <div class="connexion-form-container">
+        <form action="" class="contact-form">
+          <div class="form-row">
+            <div class="form-group half-width">
+              <label for="nom">Nom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="nom" name="nom" placeholder="ex. Dupont" required aria-describedby="nom-desc">
+                <span id="nom-desc" class="sr-only">Entrez votre nom de famille, ce champ est requis.</span>
+              </div>
+            </div>
+            <div class="form-group half-width">
+              <label for="prenom">Prénom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="prenom" name="prenom" placeholder="ex. Jean" required aria-describedby="prenom-desc">
+                <span id="prenom-desc" class="sr-only">Entrez votre prénom, ce champ est requis.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email-inscription">Email académique <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+              <input type="email" id="email-inscription" name="email" placeholder="ex. jean.dupont@univ.fr" required aria-describedby="email-desc">
+              <span id="email-desc" class="sr-only">Entrez votre email académique, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password-inscription">Mot de passe <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+              <input type="password" id="password-inscription" name="password" placeholder="Créez un mot de passe" required aria-describedby="password-desc">
+              <span id="password-desc" class="sr-only">Créez un mot de passe de 8 à 12 caractères, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirmer le mot de passe <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez votre mot de passe" required aria-describedby="confirm-password-desc">
+              <span id="confirm-password-desc" class="sr-only">Confirmez votre mot de passe, ce champ est requis.</span>
+            </div>
+          </div>
+          <button type="submit">
+            S'inscrire
+            <i class="fas fa-user-plus button-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p class="switch-option">Vous avez déjà un compte ? <a href="{{ url_for('connexion') }}">Se connecter</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (identique à index.html) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

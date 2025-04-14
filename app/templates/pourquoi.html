@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pourquoi Defonsor AI ? - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Section Header -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Pourquoi Defonsor AI -->
+  <section id="pourquoi-defonsor" class="technologie">
+    <div class="technologie-title">
+      <i class="fas fa-rocket technologie-title-icon" aria-label="Icône de fusée symbolisant la performance"></i>
+      <h2>Pourquoi choisir Defonsor AI ?</h2>
+    </div>
+    <p>Avec Defonsor AI, passez à un niveau supérieur de cybersécurité. Protégez vos données, gagnez en tranquillité d’esprit et restez en avance sur les cybermenaces grâce à notre technologie unique et intuitive. Voici ce qui nous rend incontournables :</p>
+    <div class="technologie-content">
+      <div class="technologie-features">
+        <h3>Des avantages exclusifs pour vous</h3>
+        <ul class="technologie-list">
+          <li>
+            <div class="technologie-icon-wrapper">
+              <i class="fas fa-clock technologie-icon" aria-label="Icône d'horloge symbolisant la rapidité"></i>
+            </div>
+            <span><strong>Protection instantanée</strong> : Réduisez les risques de cyberattaques de 90 % dès les premières 24 heures grâce à notre déploiement ultra-rapide.</span>
+          </li>
+          <li>
+            <div class="technologie-icon-wrapper">
+              <i class="fas fa-brain technologie-icon" aria-label="Icône de cerveau symbolisant l'IA prédictive"></i>
+            </div>
+            <span><strong>Analyse prédictive</strong> : Nos algorithmes d’IA anticipent les menaces avant qu’elles ne se manifestent, vous offrant une longueur d’avance sur les pirates.</span>
+          </li>
+          <li>
+            <div class="technologie-icon-wrapper">
+              <i class="fas fa-user-shield technologie-icon" aria-label="Icône de bouclier utilisateur symbolisant la simplicité"></i>
+            </div>
+            <span><strong>Simplicité et contrôle</strong> : Une interface intuitive qui vous donne un contrôle total sur votre sécurité, sans nécessiter de compétences techniques avancées.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="technologie-image">
+        <div class="icon-container">
+          <i class="fas fa-globe technologie-main-icon" aria-label="Icône de globe symbolisant une protection globale"></i>
+        </div>
+      </div>
+    </div>
+    <div class="technologie-cta-container">
+      <a href="{{ url_for('acces') }}" class="technologie-cta">
+        Essayez Defonsor AI gratuitement
+        <i class="fas fa-arrow-right cta-icon"></i>
+      </a>
+      <p class="cta-subtext">Rejoignez des milliers d'utilisateurs déjà protégés et découvrez une cybersécurité sans compromis.</p>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-globe bg-globe-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

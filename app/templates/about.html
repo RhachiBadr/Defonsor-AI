@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Section Header -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section À propos -->
+  <section id="about" class="technologie">
+    <div class="technologie-title">
+      <i class="fas fa-info-circle technologie-title-icon" aria-label="Icône d'information symbolisant À propos"></i>
+      <h2>À propos de Defonsor AI</h2>
+    </div>
+    <p>Defonsor AI est une plateforme de cybersécurité révolutionnaire conçue pour protéger vos données et vos systèmes contre les cybermenaces les plus avancées. Fondée en 2025, notre mission est de rendre la sécurité numérique accessible à tous, des particuliers aux grandes entreprises.</p>
+    <div class="technologie-content">
+      <div class="technologie-features">
+        <h3>Notre mission</h3>
+        <p>Nous croyons en un monde numérique sûr pour tous. Grâce à notre expertise et à notre technologie de pointe, nous anticipons les menaces, protégeons vos données en temps réel, et vous offrons une tranquillité d’esprit inégalée.</p>
+        <h3>Notre équipe</h3>
+        <p>Notre équipe est composée d’étudiants experts en cybersécurité et en intelligence artificielle, passionnés de technologie, dédiés à repousser les limites de la sécurité numérique.</p>
+      </div>
+      <div class="technologie-image">
+        <div class="icon-container">
+          <i class="fas fa-users technologie-main-icon" aria-label="Icône d'équipe symbolisant notre équipe"></i>
+        </div>
+      </div>
+    </div>
+    <div class="technologie-cta-container">
+      <a href="{{ url_for('index') }}" class="technologie-cta">
+        Retour à l'accueil
+        <i class="fas fa-arrow-left cta-icon"></i>
+      </a>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-users bg-users-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

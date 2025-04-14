@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Section Header -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Mentions légales -->
+  <section id="legal" class="technologie">
+    <div class="technologie-title">
+      <i class="fas fa-gavel technologie-title-icon" aria-label="Icône de marteau symbolisant les mentions légales"></i>
+      <h2>Mentions légales</h2>
+    </div>
+    <div class="technologie-content">
+      <div class="legal-content">
+        <h3>Éditeur du site</h3>
+        <p>Defonsor AI<br>Adresse : Fes, MAROC<br>Email : <a href="mailto:contact@defonsorai.fr">contact@defonsorai.fr</a></p>
+        <h3>Propriété intellectuelle</h3>
+        <p>Tous les contenus présents sur ce site (textes, images, logos, etc.) sont la propriété exclusive de Defonsor AI et sont protégés par les lois sur la propriété intellectuelle. Toute reproduction sans autorisation est interdite.</p>
+        <h3>Responsabilité</h3>
+        <p>Defonsor AI s’efforce de fournir des informations exactes et à jour, mais ne peut garantir l’exactitude ou l’exhaustivité des informations. L’utilisation du site se fait à vos propres risques.</p>
+      </div>
+    </div>
+    <div class="technologie-cta-container">
+      <a href="{{ url_for('index') }}" class="technologie-cta">
+        Retour à l'accueil
+        <i class="fas fa-arrow-left cta-icon"></i>
+      </a>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-gavel bg-gavel-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

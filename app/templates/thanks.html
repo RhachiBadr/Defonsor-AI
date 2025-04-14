@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="thanks" style="text-align: center; margin: 50px auto; padding: 20px; max-width: 600px; color: #333; background-color: #f9f9f9; border-radius: 8px;">
+    <h2 style="font-size: 24px; margin-bottom: 15px;">Merci pour votre inscription !</h2>
+    <p style="font-size: 18px;">Veuillez vérifier votre e-mail pour activer votre compte. Vous serez redirigé vers le tableau de bord dans <span id="countdown">15</span> secondes.</p>
+    <button id="analyze-btn-thanks" class="analyze-btn" data-href="{{ url_for('dashboard') }}" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">Aller au tableau de bord</button>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defonsor AI - Nos Services</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Header (identique à index.html) -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Détails des Services -->
+  <section id="services-details" class="services-details">
+    <div class="services-details-background">
+      <i class="fas fa-microchip bg-microchip-icon" aria-hidden="true"></i>
+    </div>
+    <div class="services-details-content">
+      <div class="services-details-header">
+        <h1>Nos Services en Détail</h1>
+        <p class="services-details-subtitle">Découvrez comment Defonsor AI protège vos données avec des solutions avancées en cybersécurité.</p>
+      </div>
+      <div class="services-details-grid">
+        <div class="service-detail-item">
+          <div class="service-detail-icon">
+            <i class="fas fa-search" aria-label="Icône de loupe symbolisant l'anticipation des menaces"></i>
+          </div>
+          <h3>Anticipation des Menaces</h3>
+          <p>Grâce à l’intelligence artificielle, Defonsor AI analyse les tendances et les données en temps réel pour identifier et anticiper les menaces avant qu’elles ne se concrétisent. Nous utilisons des algorithmes avancés pour prédire et prévenir les cyberattaques.</p>
+        </div>
+        <div class="service-detail-item">
+          <div class="service-detail-icon">
+            <i class="fas fa-shield-alt" aria-label="Icône de bouclier symbolisant la détection en temps réel"></i>
+          </div>
+          <h3>Détection en Temps Réel</h3>
+          <p>Nos systèmes surveillent en continu vos réseaux et vos données, détectant les cyberattaques en temps réel. Dès qu’une anomalie est repérée, vous êtes alerté instantanément pour une réponse rapide.</p>
+        </div>
+        <div class="service-detail-item">
+          <div class="service-detail-icon">
+            <i class="fas fa-bolt" aria-label="Icône d'éclair symbolisant la réponse rapide"></i>
+          </div>
+          <h3>Réponse Rapide</h3>
+          <p>En cas de cyberattaque, Defonsor AI agit rapidement pour minimiser les risques. Nos outils automatisés bloquent les menaces et vous fournissent des recommandations pour sécuriser vos systèmes immédiatement.</p>
+        </div>
+      </div>
+      <a href="{{ url_for('acces') }}" class="services-details-cta">Protégez-vous maintenant !</a>
+    </div>
+  </section>
+
+  <!-- Footer (identique à index.html) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

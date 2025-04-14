@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('services') }}">Nos Services</a>
+      <a href="{{ url_for('pourquoi') }}">Pourquoi nous ?</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Accueil -->
+  <section id="accueil" class="accueil">
+    <div class="accueil-content">
+      <div class="accueil-title">
+        <i class="fas fa-shield-alt title-icon" aria-hidden="true"></i>
+        <h1>BIENVENUE SUR <span class="highlight">DEFONSOR AI</span></h1>
+      </div>
+      <p><em>Protégez-vous contre les cybermenaces dès maintenant !</em></p>
+      <p class="slogan">Anticipez, Protégez, Innovez</p>
+      <a href="{{ url_for('acces') }}" class="cta">Commencez gratuitement</a>
+    </div>
+  </section>
+
+  <!-- Section Perception des Menaces -->
+  <section id="a-propos" class="menaces">
+    <div class="menaces-title">
+      <i class="fas fa-exclamation-triangle menaces-title-icon" aria-label="Icône d'alerte symbolisant les menaces"></i>
+      <h2>Perception des Menaces</h2>
+    </div>
+    <p>Dans cette partie, nous vous présentons les types d’attaques possibles que nous combattons :</p>
+    <div class="severity-legend">
+      <span><span class="severity-dot high"></span> Menace fréquente ou grave</span>
+      <span><span class="severity-dot medium"></span> Menace modérée</span>
+    </div>
+    <div class="menaces-grid">
+      <div class="menace-item">
+        <i class="fas fa-fish menace-icon" title="Icône de poisson symbolisant une tentative de hameçonnage"></i>
+        <div class="menace-header">
+          <h3>Phishing</h3>
+          <span class="severity-dot high"></span>
+        </div>
+        <p>Des emails ou messages frauduleux qui vous incitent à partager vos informations personnelles, comme vos mots de passe.</p>
+      </div>
+      <div class="menace-item">
+        <i class="fas fa-database menace-icon" title="Icône de base de données symbolisant une attaque sur les données"></i>
+        <div class="menace-header">
+          <h3>SQL Injection</h3>
+          <span class="severity-dot medium"></span>
+        </div>
+        <p>Une méthode où les pirates insèrent du code dans un site pour accéder à des informations sensibles, comme vos données personnelles.</p>
+      </div>
+      <div class="menace-item">
+        <i class="fas fa-code menace-icon" title="Icône de code symbolisant une attaque par scripts malveillants"></i>
+        <div class="menace-header">
+          <h3>XSS</h3>
+          <span class="severity-dot medium"></span>
+        </div>
+        <p>Les pirates insèrent du code malveillant dans une page web pour voler vos informations ou vous rediriger vers des sites dangereux.</p>
+      </div>
+      <div class="menace-item">
+        <i class="fas fa-network-wired menace-icon" title="Icône de réseau symbolisant une intrusion non autorisée"></i>
+        <div class="menace-header">
+          <h3>Intrusions Réseaux</h3>
+          <span class="severity-dot high"></span>
+        </div>
+        <p>Les pirates accèdent à votre réseau sans permission pour voler des données ou perturber vos systèmes.</p>
+      </div>
+    </div>
+    <a href="{{ url_for('acces') }}" class="menaces-cta">Protégez-vous maintenant</a>
+  </section>
+
+  <!-- Section Engagements et Services -->
+  <section id="services" class="services">
+    <div class="services-title">
+      <i class="fas fa-cogs services-title-icon" aria-label="Icône d'engrenages symbolisant les services"></i>
+      <h2>Nos Engagements et Services</h2>
+    </div>
+    <div class="services-content">
+      <div class="services-text">
+        <ul class="services-list">
+          <li>
+            <div class="service-icon-wrapper">
+              <i class="fas fa-search services-icon" aria-label="Icône de loupe symbolisant l'anticipation"></i>
+            </div>
+            <span>Anticiper les menaces grâce à l’intelligence artificielle.</span>
+          </li>
+          <li>
+            <div class="service-icon-wrapper">
+              <i class="fas fa-shield-alt services-icon" aria-label="Icône de bouclier symbolisant la détection"></i>
+            </div>
+            <span>Détecter les cyberattaques en temps réel.</span>
+          </li>
+          <li>
+            <div class="service-icon-wrapper">
+              <i class="fas fa-bolt services-icon" aria-label="Icône d'éclair symbolisant la réactivité"></i>
+            </div>
+            <span>Répondre rapidement pour minimiser les risques.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="services-image">
+        <div class="icon-container">
+          <i class="fas fa-brain ai-icon" aria-label="Icône de cerveau symbolisant l'intelligence artificielle"></i>
+        </div>
+      </div>
+      <div class="services-cta-container">
+        <a href="{{ url_for('services') }}" class="services-cta">
+          En savoir plus
+          <i class="fas fa-arrow-right cta-icon"></i>
+        </a>
+      </div>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-brain bg-brain-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Valeur Ajoutée -->
+  <section id="valeur" class="valeur">
+    <div class="valeur-title">
+      <i class="fas fa-lightbulb valeur-title-icon" aria-label="Icône d'ampoule symbolisant l'innovation"></i>
+      <h2>Notre Valeur Ajoutée</h2>
+    </div>
+    <p>Nos solutions combinent <span class="highlight-key"><i class="fas fa-check highlight-icon"></i> expertise</span>, <span class="highlight-key"><i class="fas fa-lightbulb highlight-icon"></i> innovation</span> et <span class="highlight-key"><i class="fas fa-bolt highlight-icon"></i> efficacité</span> face aux attaques plus adaptées et sophistiquées, vous offrant ainsi une défense toujours à la pointe.</p>
+    <div class="valeur-image">
+      <div class="icon-container">
+        <i class="fas fa-lightbulb innovation-icon" aria-label="Icône d'ampoule symbolisant l'innovation"></i>
+      </div>
+    </div>
+    <div class="valeur-cta-container">
+      <p class="cta-subtext">Explorez notre approche innovante</p>
+      <a href="{{ url_for('pourquoi') }}" class="valeur-cta">
+        Découvrez plus notre technologie
+        <i class="fas fa-microchip cta-icon"></i>
+      </a>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-microchip bg-microchip-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-title">
+      <i class="fas fa-headset contact-title-icon" aria-label="Icône de casque symbolisant le support"></i>
+      <h2>Besoin d’aide ? Contactez-nous !</h2>
+    </div>
+    <p>Vous avez des questions ou des commentaires ? Souhaitez-vous en savoir davantage sur notre plateforme ou la protection offerte ? Remplissez ce formulaire :</p>
+    <div class="contact-container">
+      <div class="contact-form-container">
+        <div class="form-title">
+          <i class="fas fa-envelope form-title-icon" aria-label="Icône d'enveloppe symbolisant le formulaire de contact"></i>
+          <h3>Formulaire de contact</h3>
+        </div>
+        <form action="" class="contact-form">
+          <div class="form-row">
+            <div class="form-group half-width">
+              <label for="nom">Nom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="nom" name="nom" placeholder="Nom de famille" required aria-describedby="nom-desc">
+                <span id="nom-desc" class="sr-only">Entrez votre nom de famille, ce champ est requis.</span>
+              </div>
+            </div>
+            <div class="form-group half-width">
+              <label for="prenom">Prénom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required aria-describedby="prenom-desc">
+                <span id="prenom-desc" class="sr-only">Entrez votre prénom, ce champ est requis.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Numéro de téléphone</label>
+            <div class="input-wrapper">
+              <i class="fas fa-phone input-icon" aria-hidden="true"></i>
+              <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone (optionnel)" aria-describedby="telephone-desc">
+              <span id="telephone-desc" class="sr-only">Entrez votre numéro de téléphone, ce champ est optionnel.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email académique <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+              <input type="email" id="email" name="email" placeholder="Votre E-mail" required aria-describedby="email-desc">
+              <span id="email-desc" class="sr-only">Entrez votre email académique, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn (facultatif)</label>
+            <div class="input-wrapper">
+              <i class="fab fa-linkedin input-icon" aria-hidden="true"></i>
+              <input type="text" id="linkedin" name="linkedin" placeholder="Lien LinkedIn (optionnel)" aria-describedby="linkedin-desc">
+              <span id="linkedin-desc" class="sr-only">Entrez votre lien LinkedIn, ce champ est optionnel.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-comment input-icon" aria-hidden="true"></i>
+              <textarea id="message" name="message" placeholder="Tapez votre message ici, décrivez votre demande ou question..." required aria-describedby="message-desc"></textarea>
+              <span id="message-desc" class="sr-only">Entrez votre message, ce champ est requis.</span>
+            </div>
+          </div>
+          <button type="submit">
+            Envoyer
+            <i class="fas fa-paper-plane button-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <img src="{{ url_for('static', filename='images/Oeil logo.png') }}" alt="Icône de Defonsor AI" class="contact-icon" loading="lazy">
+        <div class="contact-info-title">
+          <i class="fas fa-address-card contact-info-title-icon" aria-label="Icône de carte de contact"></i>
+          <h3>Nos coordonnées</h3>
+        </div>
+        <div class="contact-info-emails">
+          <p>
+            <i class="fas fa-envelope info-icon" aria-hidden="true"></i>
+            <a href="mailto:support@defonsorai.com" class="contact-link">support@defonsorai.com</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope info-icon" aria-hidden="true"></i>
+            <a href="mailto:contact@defonsorai.com" class="contact-link">contact@defonsorai.com</a>
+          </p>
+        </div>
+        <hr class="contact-info-divider">
+      </div>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-headset bg-headset-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

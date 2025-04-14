@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suivez-nous - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Section Header -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Suivez-nous -->
+  <section id="social" class="technologie">
+    <div class="technologie-title">
+      <i class="fas fa-share-alt technologie-title-icon" aria-label="Icône de partage symbolisant les réseaux sociaux"></i>
+      <h2>Suivez-nous</h2>
+    </div>
+    <p>Restez connectés avec Defonsor AI pour les dernières mises à jour, conseils en cybersécurité, et bien plus encore ! Suivez-nous sur nos réseaux sociaux :</p>
+    <div class="technologie-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/omar-ziani-el-idrissi-30b15730b/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin social-icon" aria-hidden="true"></i> LinkedIn - Omar Ziani El Idrissi
+        </a>
+        <a href="https://www.linkedin.com/in/badr-rhachi-70b19a293/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin social-icon" aria-hidden="true"></i> LinkedIn - Badr Rhachi
+        </a>
+      </div>
+    </div>
+    <div class="technologie-cta-container">
+      <a href="{{ url_for('index') }}" class="technologie-cta">
+        Retour à l'accueil
+        <i class="fas fa-arrow-left cta-icon"></i>
+      </a>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-share-alt bg-share-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

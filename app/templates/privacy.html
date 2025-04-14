@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité - Defonsor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Section Header -->
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}#accueil">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <!-- Section Politique de confidentialité -->
+  <section id="privacy" class="technologie">
+    <div class="technologie-title">
+      <i class="fas fa-lock technologie-title-icon" aria-label="Icône de cadenas symbolisant la confidentialité"></i>
+      <h2>Politique de confidentialité</h2>
+    </div>
+    <div class="technologie-content">
+      <div class="privacy-content">
+        <h3>Collecte des données</h3>
+        <p>Nous collectons des informations personnelles (nom, email, etc.) uniquement lorsque vous nous les fournissez volontairement via nos formulaires (contact, inscription, etc.).</p>
+        <h3>Utilisation des données</h3>
+        <p>Vos données sont utilisées pour améliorer votre expérience sur notre plateforme, répondre à vos demandes, et vous informer sur nos services. Elles ne seront jamais vendues ou partagées avec des tiers sans votre consentement explicite.</p>
+        <h3>Protection des données</h3>
+        <p>Nous utilisons des protocoles de sécurité avancés (chiffrement SSL, stockage sécurisé) pour protéger vos données contre les accès non autorisés.</p>
+        <h3>Vos droits</h3>
+        <p>Conformément au DUDA, vous avez le droit d’accéder, de modifier, ou de supprimer vos données. Contactez-nous à l’adresse <a href="mailto:contact@defonsorai.fr">contact@defonsorai.fr</a> pour exercer ces droits.</p>
+      </div>
+    </div>
+    <div class="technologie-cta-container">
+      <a href="{{ url_for('index') }}" class="technologie-cta">
+        Retour à l'accueil
+        <i class="fas fa-arrow-left cta-icon"></i>
+      </a>
+    </div>
+    <div class="background-icon">
+      <i class="fas fa-lock bg-lock-icon" aria-hidden="true"></i>
+    </div>
+  </section>
+
+  <!-- Section Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connectez-vous ou inscrivez-vous à Defonsor AI pour protéger vos données contre les cybermenaces.">
+  <title>Defonsor AI - Connexion ou Inscription</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style copy.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/Logo Plateforme.png') }}" alt="Defonsor AI Logo" class="logo" loading="lazy">
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}">Accueil</a>
+      <a href="{{ url_for('index') }}#a-propos">Menaces</a>
+      <a href="{{ url_for('index') }}#services">Nos Services</a>
+      <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+    <button id="start-btn" class="entamer" data-href="{{ url_for('acces') }}">Commencez maintenant !</button>
+  </header>
+
+  <section id="acces" class="acces-section">
+    <div class="acces-background">
+      <i class="fas fa-network-wired bg-network-icon" aria-hidden="true"></i>
+    </div>
+    <div class="acces-content">
+      <div class="acces-header">
+        <i class="fas fa-shield-virus acces-icon" aria-hidden="true"></i>
+        <h1>Défendez l’avenir avec <span class="highlight">Defonsor AI</span></h1>
+        <p class="acces-subtitle">Votre bouclier numérique contre les cybermenaces. Connectez-vous ou inscrivez-vous pour sécuriser vos données dès aujourd’hui.</p>
+      </div>
+      <div class="connexion-options">
+        <button id="open-login-modal" class="connexion-option-btn">Se connecter</button>
+        <button id="open-signup-modal" class="connexion-option-btn">S'inscrire</button>
+      </div>
+      <p class="acces-cta-message">Protégez vos données avec l’intelligence artificielle la plus avancée. Rejoignez Defonsor AI maintenant !</p>
+    </div>
+
+    <!-- Modale pour Se connecter -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-login-modal">×</span>
+        <h2>Connexion</h2>
+        <form id="login-form" class="modal-form">
+          <div class="form-group">
+            <label for="login-email">Votre E-mail <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+              <input type="email" id="login-email" name="email" placeholder="Votre E-mail" required aria-required="true" aria-describedby="login-email-desc">
+              <span id="login-email-desc" class="sr-only">Entrez votre email, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Mot de passe <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+              <input type="password" id="login-password" name="password" placeholder="Entrez votre mot de passe" required aria-required="true" aria-describedby="login-password-desc">
+              <span id="login-password-desc" class="sr-only">Entrez votre mot de passe, ce champ est requis.</span>
+            </div>
+          </div>
+          <button type="submit">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modale pour S'inscrire -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-signup-modal">×</span>
+        <h2>Inscription</h2>
+        <form id="signup-form" class="modal-form">
+          <div class="form-row">
+            <div class="form-group half-width">
+              <label for="signup-nom">Nom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="signup-nom" name="nom" placeholder="Nom de famille" required aria-required="true" aria-describedby="signup-nom-desc">
+                <span id="signup-nom-desc" class="sr-only">Entrez votre nom de famille, ce champ est requis.</span>
+              </div>
+            </div>
+            <div class="form-group half-width">
+              <label for="signup-prenom">Prénom <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input type="text" id="signup-prenom" name="prenom" placeholder="Prénom" required aria-required="true" aria-describedby="signup-prenom-desc">
+                <span id="signup-prenom-desc" class="sr-only">Entrez votre prénom, ce champ est requis.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Votre E-mail <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+              <input type="email" id="signup-email" name="email" placeholder="Votre E-mail" required aria-required="true" aria-describedby="signup-email-desc">
+              <span id="signup-email-desc" class="sr-only">Entrez votre email, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Mot de passe <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+              <input type="password" id="signup-password" name="password" placeholder="Créez un mot de passe (12 car max)" required aria-required="true" aria-describedby="signup-password-desc">
+              <span id="signup-password-desc" class="sr-only">Créez un mot de passe de 8 à 12 caractères, ce champ est requis.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirmer le mot de passe <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon" aria-hidden="true"></i>
+              <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirmez votre mot de passe (12 car max)" required aria-required="true" aria-describedby="signup-confirm-password-desc">
+              <span id="signup-confirm-password-desc" class="sr-only">Confirmez votre mot de passe, ce champ est requis.</span>
+            </div>
+          </div>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-main">
+        <i class="fas fa-shield-alt footer-icon" aria-hidden="true"></i>
+        <p>@2025, Defonsor AI. <a href="{{ url_for('about') }}" class="rights-reserved">Tous droits réservés.</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('legal') }}">Mentions légales</a> |
+        <a href="{{ url_for('privacy') }}">Politique de confidentialité</a> |
+        <a href="{{ url_for('social') }}">Suivez-nous</a>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>
